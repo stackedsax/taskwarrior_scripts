@@ -1,0 +1,9 @@
+alias t="task"
+alias tl="task sync &>/dev/null; task"
+alias ta="task add"
+alias tn="task next"
+alias tw="task +work"
+alias tm="task +me"
+
+function td { yes | task $* done; }
+function ts { task $* start; }
