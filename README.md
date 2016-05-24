@@ -37,6 +37,12 @@ You'll find mine in .task_aliases.  Add them to yours and adjust as you see fit.
 
 ### Copy files into place:
 
+##### Outlook 2016:
+
+	cp -avp "Create New TaskWarrior Task.scptd" "/Users/`whoami`/Library/Scripts/Applications/Outlook/"
+
+##### Outlook 2011:
+
 	cp -avp "Create New TaskWarrior Task.scptd" "/Users/`whoami`/Library/Application Support/Microsoft/Office/Outlook Script Menu Items/"
 
 ### Create key binding
