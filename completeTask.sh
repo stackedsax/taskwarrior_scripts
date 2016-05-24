@@ -3,9 +3,11 @@
 TASK_BIN='/usr/local/bin/task'
 DEBUG=false
 
+# All this escaping now moot because I added 'description:' to the task done line below
+
 # Escape the special characters + - \ * and '
 # Yeah, this is the whole retarded point of doing this in a bash script
-ESCAPED_INPUT=`echo "$1" | sed "s/\([\'\+\*\\\-]\)/\\\\\\\\\1/g"`
+ESCAPED_INPUT=`echo "$1" | sed "s/\([\'\+\*\[\]]\)/\\\\\\\\\1/g"`
 
 # For debugging purposes
 if [ "$DEBUG" = true ] ; then
@@ -14,4 +16,4 @@ if [ "$DEBUG" = true ] ; then
 fi
 
 # Complete the bastard
-echo "all" |  $TASK_BIN "$ESCAPED_INPUT" done >> ~/.task/taskwarrior.log 2>&1; exit 0
+echo "all" |  $TASK_BIN description:"$1" done >> ~/.task/taskwarrior.log 2>&1; exit 0

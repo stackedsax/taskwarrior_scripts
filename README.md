@@ -41,7 +41,7 @@ You'll find mine in .task_aliases.  Add them to yours and adjust as you see fit.
 
 ### Create key binding
 
-1. Open Leyboard System Preferences
+1. Open Keyboard System Preferences
 2. Go to 'Shortcuts'
 3. Go to 'App Shortcuts'
 4. Add a new shortcut with the + sign
